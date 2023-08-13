@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ICON-->
+    <link rel="icon" href="Images/Logo.png">
+    <!--CSS-->
+    <link rel="stylesheet" href="CSS/colors.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/admin-panel.css">
+    <title>Admin Panel</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--HEADER-->
+        <header class="admin-panel-header flex-row">
+            <div class="logo flex-row">
+                <img src="Images/Logo.png">
+                <h1>Add Question</h1>
+            </div>
+            <ul class="admin-panel-menu flex-row">
+                <li><a href="admin-panel.html">Add Question</a></li>
+                <li><a href="#">Delete Question</a></li>
+                <li><a href="#">Saved Questions</a></li>
+                <li><a href="MainMenu.html"><img src="Images/Icon_Exit.png"></a></li>
+            </ul>
+        </header>
+        <!--SECTION | ADD QUESTION-->
+        <section class="question-container flex-column">
+            <form id="question-form" class="flex-column">
+                <input type="textarea" id="question" placeholder="Question" />
+                <input id="answer-A" placeholder="A" />
+                <input id="answer-B" placeholder="B" />
+                <input id="answer-C" placeholder="C" />
+                <input id="answer-D" placeholder="D" />
+                <input id="answer-true" placeholder="True Answer" />
+                <button id="btn-add" type="submit">ADD</button>
+                <button id="btn-delete-all" style="color:red" type="button">Delete All Questions</button>
+            </form>
+        </section>
+    </div>
+    <script src="Scripts/admin-panel.js"></script>
+    <script src="Scripts/ClearLocalStorage.js"></script>
+</body>
+
+</html>
