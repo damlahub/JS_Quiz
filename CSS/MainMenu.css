@@ -1,0 +1,40 @@
+.container{
+    flex-direction: column;
+}
+.container .logo{
+    width: 200px;
+}
+.container .options{
+    width: 100%;
+    background-color: var(--black);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.container .options section{
+    width: 400px;
+    height: 400px;
+    background-color: var(--black);
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container a{
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container a img{
+width: 300px;
+height: 300px;
+padding: 20px;
+}
+.container a h1{
+    font-size: 1.3em;
+    font-weight: bolder;
+    padding: 5px;
+}
