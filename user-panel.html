@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--ICON-->
+    <link rel="icon" href="Images/Logo.png">
+    <!--CSS-->
+    <link rel="stylesheet" href="CSS/colors.css">
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/user-panel.css">
+    <title>RQuestions</title>
+</head>
+
+<body>
+    <div class="container">
+        <!--HEADER-->
+        <header class="admin-panel-header flex-row">
+            <div class="logo flex-row">
+                <img src="Images/Logo.png">
+                <h1>RQuestions</h1>
+            </div>
+            <ul class="admin-panel-menu flex-row">
+                <!-- <li><p>✓  3</p></li>
+                <li><p>X  2</p></li> -->
+                <li><a href="MainMenu.html"><img src="Images/Icon_Exit.png"></a></li>
+            </ul>
+        </header>
+        <!--SECTION | ADD QUESTION-->
+        <section class="question-container flex-column">
+            <form id="question-form" class="flex-column">
+                <!-- div olacak içine <p> ekle soruyu göster -->
+                <input type="textarea" id="question" placeholder="Question" />
+                <!-- button olacak. -->
+                <input id="answer-A" placeholder="A" />
+                <input id="answer-B" placeholder="B" />
+                <input id="answer-C" placeholder="C" />
+                <input id="answer-D" placeholder="D" />
+                <button id="btn-add" type="submit">CHECK IT</button>
+            </form>
+        </section>
+        <script src="Scripts/user-panel.js"></script>
+</body>
+
+</html>

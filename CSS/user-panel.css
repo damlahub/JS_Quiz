@@ -1,0 +1,59 @@
+/* Header */
+.admin-panel-header{
+    width: 100%;
+    height: 10vh;
+    background-color: var(--black);
+    justify-content: space-around;
+    border-bottom: 1px solid var(--white);
+}
+.logo{
+    cursor: default;
+}
+.admin-panel-header img{
+    width: 70px;
+    border-radius: 50%;
+}
+.admin-panel-menu{
+    width: 50%;
+    justify-content: space-around;
+}
+.admin-panel-menu li{
+    padding: 10px;
+    list-style: none;
+    background-color: var(--white);
+    border-radius: 1%;
+}
+.admin-panel-menu li p{
+    text-decoration: none;
+    color: var(--black);
+    font-size: 1.2em;
+}
+.admin-panel-menu li img{
+    width: 25px;
+}
+/* Section | RQuestions */
+.question-container{
+    width: 100%;
+    height: 90vh;
+}
+#question-form{
+    width: 90%;
+    height: 80vh;
+    border: 1px solid var(--white);
+}
+#question-form input{
+    width: 50%;
+    padding: 15px;
+    margin: 10px;
+    color: var(--white);
+    background-color: var(--black);
+    border: 1px solid var(--white);
+}
+#question-form button{
+    width: 50%;
+    padding: 15px;
+    margin: 10px;
+    color: var(--white);
+    background-color: var(--black);
+    border: 1px solid var(--white);
+}
