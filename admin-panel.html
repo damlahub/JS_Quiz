@@ -13,6 +13,7 @@
 </head>
 <body>
     <div class="container">
+        <!--HEADER-->
         <header class="admin-panel-header flex-row">
             <div class="logo flex-row">
                 <img src="Images/Logo.png">
@@ -24,6 +25,18 @@
                 <li><a href="#">Saved Questions</a></li>
             </ul>
         </header>
+        <!--SECTION | ADD QUESTION-->
+        <section class="question-container flex-column">
+                <form id="question-form" class="flex-column">
+                    <input type="textarea" id="question" placeholder="Question"/>
+                    <input id="answer-A" placeholder="A"/>
+                    <input id="answer-B" placeholder="B"/>
+                    <input id="answer-C" placeholder="C"/>
+                    <input id="answer-D" placeholder="D"/>
+                    <input id="answer-true" placeholder="True Answer"/>
+                    <button id="btn-add" type="button">ADD</button>
+                </form>
+        </section>
     </div>
     <script src="Scripts/admin-panel.js"></script>
 </body>
