@@ -22,22 +22,30 @@
                 <h1>RQuestions</h1>
             </div>
             <ul class="admin-panel-menu flex-row">
-                <!-- <li><p>✓  3</p></li>
-                <li><p>X  2</p></li> -->
+                <li class="green"><p>3</p></li>
+                <li class="red"><p>2</p></li>
                 <li><a href="MainMenu.html"><img src="Images/Icon_Exit.png"></a></li>
             </ul>
         </header>
-        <!--SECTION | ADD QUESTION-->
+        <!--SECTION |  RQUESTION-->
         <section class="question-container flex-column">
             <form id="question-form" class="flex-column">
-                <!-- div olacak içine <p> ekle soruyu göster -->
-                <input type="textarea" id="question" placeholder="Question" />
+                <div id="question-div" class="flex-row">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate impedit rem voluptatem, velit nesciunt, atque officiis quod, est culpa excepturi incidunt architecto eaque nam doloribus dolorum fugiat. Consequatur, impedit provident.</p>
+                </div>
                 <!-- button olacak. -->
-                <input id="answer-A" placeholder="A" />
-                <input id="answer-B" placeholder="B" />
-                <input id="answer-C" placeholder="C" />
-                <input id="answer-D" placeholder="D" />
-                <button id="btn-add" type="submit">CHECK IT</button>
+                <button id="answer-A">
+                    <p>A)  dolor sit amet consectetur adipisicing elit.</p>
+                </button>
+                <button id="answer-B">
+                    <p>B)  dolor sit amet consectetur adipisicing elit.</p>
+                </button>
+                <button id="answer-A">
+                    <p>C)  dolor sit amet consectetur adipisicing elit.</p>
+                </button>
+                <button id="answer-A">
+                    <p>D)  dolor sit amet consectetur adipisicing elit.</p>
+                </button>
             </form>
         </section>
         <script src="Scripts/user-panel.js"></script>

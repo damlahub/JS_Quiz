@@ -6,6 +6,16 @@
     justify-content: space-around;
     border-bottom: 1px solid var(--white);
 }
+.admin-panel-menu .red{
+    text-align: center;
+    width: 100px;
+    background-color: red;
+}
+.admin-panel-menu .green{
+    text-align: center;
+    width: 100px;
+    background-color: rgb(0, 255, 21);
+}
 .logo{
     cursor: default;
 }
@@ -25,8 +35,9 @@
 }
 .admin-panel-menu li p{
     text-decoration: none;
-    color: var(--black);
+    color: var(--white);
     font-size: 1.2em;
+    font-weight: bolder;
 }
 .admin-panel-menu li img{
     width: 25px;
@@ -41,7 +52,10 @@
     height: 80vh;
     border: 1px solid var(--white);
 }
-#question-form input{
+#question-div{
+    width: 50%;
+}
+#question-form button{
     width: 50%;
     padding: 15px;
     margin: 10px;
