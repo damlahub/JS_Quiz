@@ -28,6 +28,10 @@
     color: var(--black);
     font-size: 1.2em;
 }
+.admin-panel-menu li a img{
+    width: 25px;
+}
+
 /* Section | Add Q */
 .question-container{
     width: 100%;
