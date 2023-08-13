@@ -1,41 +1,57 @@
 // Soru verileri alınacak. "Add" butonuna basıldığında, Obje'de tutulacak. Sonrasında map kullanılabilir.
 // Soru ve cevaplar boş bırakılabilir (doğru - yanlış soruları için.)
 // Doğru cevap boş bırakılamaz! Toast mesajı veya normal p etiketi kullanılabilir.
-const QUESTIONS={}; //sorular buraya eklenecek.
+const QUESTIONS = {}; //sorular buraya eklenecek.
 
-const QUESTİON_FORM= document.querySelector("#question-form");
-
-let questionID=0;
+const QUESTION_FORM = document.querySelector("#question-form");
 
 EventListeners();
 
-function EventListeners(){
-    QUESTİON_FORM.addEventListener("submit", GetData);
+function EventListeners() {
+    QUESTION_FORM.addEventListener("submit", GetData);
 }
-function GetData(e){
+function GetData(e) {
     e.preventDefault();
-    questionID++;
-    let question = QUESTİON_FORM.querySelector("#question").value;
-    let answerA = QUESTİON_FORM.querySelector("#answer-A").value;
-    let answerB = QUESTİON_FORM.querySelector("#answer-B").value;
-    let answerC = QUESTİON_FORM.querySelector("#answer-C").value;
-    let answerD = QUESTİON_FORM.querySelector("#answer-D").value;
-    let answerTrue = QUESTİON_FORM.querySelector("#answer-true").value;
-    let btnAdd = QUESTİON_FORM.querySelector("#btn-add");
-    addQuestion();
-    function addQuestion(){
+    let question = QUESTION_FORM.querySelector("#question").value;
+    let answerA = QUESTION_FORM.querySelector("#answer-A").value;
+    let answerB = QUESTION_FORM.querySelector("#answer-B").value;
+    let answerC = QUESTION_FORM.querySelector("#answer-C").value;
+    let answerD = QUESTION_FORM.querySelector("#answer-D").value;
+    let answerTrue = QUESTION_FORM.querySelector("#answer-true").value;
+
+    ClearValues();
+    AddQuestion();
+    function AddQuestion() {
         const addQuestion = {
-            questionID,
             question,
-            answers:{
+            answers: {
                 A: answerA,
                 B: answerB,
                 C: answerC,
                 D: answerD,
-            } ,
-            trueAnswer:answerTrue
-          };
-          QUESTIONS.addQuestion;
-          console.log("New question added:", addQuestion);
+            },
+            trueAnswer: answerTrue
+        };
+        QUESTIONS.addQuestion;
+        console.log("New question added:", addQuestion);
+        LocalStorage();
+        function LocalStorage(){
+            if (localStorage.getItem("questions")) {
+                const storedQuestions = JSON.parse(localStorage.getItem("questions"));
+                storedQuestions.push(addQuestion);
+                localStorage.setItem("questions", JSON.stringify(storedQuestions));
+            } else {
+                const initialQuestions = [addQuestion];
+                localStorage.setItem("questions", JSON.stringify(initialQuestions));
+            }
+        }
+    }
+    function ClearValues() {
+        QUESTION_FORM.querySelector("#question").value = '';
+        QUESTION_FORM.querySelector("#answer-A").value = '';
+        QUESTION_FORM.querySelector("#answer-B").value = '';
+        QUESTION_FORM.querySelector("#answer-C").value = '';
+        QUESTION_FORM.querySelector("#answer-D").value = '';
+        QUESTION_FORM.querySelector("#answer-true").value = '';
     }
 }

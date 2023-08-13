@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="CSS/admin-panel.css">
     <title>Admin Panel</title>
 </head>
+
 <body>
     <div class="container">
         <!--HEADER-->
@@ -28,17 +30,20 @@
         </header>
         <!--SECTION | ADD QUESTION-->
         <section class="question-container flex-column">
-                <form id="question-form" class="flex-column">
-                    <input type="textarea" id="question" placeholder="Question"/>
-                    <input id="answer-A" placeholder="A"/>
-                    <input id="answer-B" placeholder="B"/>
-                    <input id="answer-C" placeholder="C"/>
-                    <input id="answer-D" placeholder="D"/>
-                    <input id="answer-true" placeholder="True Answer"/>
-                    <button id="btn-add" type="submit">ADD</button>
-                </form>
+            <form id="question-form" class="flex-column">
+                <input type="textarea" id="question" placeholder="Question" />
+                <input id="answer-A" placeholder="A" />
+                <input id="answer-B" placeholder="B" />
+                <input id="answer-C" placeholder="C" />
+                <input id="answer-D" placeholder="D" />
+                <input id="answer-true" placeholder="True Answer" />
+                <button id="btn-add" type="submit">ADD</button>
+                <button id="btn-delete-all" style="color:red" type="button">Delete All Questions</button>
+            </form>
         </section>
     </div>
     <script src="Scripts/admin-panel.js"></script>
+    <script src="Scripts/ClearLocalStorage.js"></script>
 </body>
+
 </html>
