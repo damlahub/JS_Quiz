@@ -52,6 +52,9 @@
     height: 80vh;
     border: 1px solid var(--white);
 }
+#question-answer-div{
+    width: 100%;
+}
 #question-div{
     width: 50%;
 }
