@@ -7,8 +7,8 @@ window.onload = function () {
     let allQuestions = GetStoredQuestions(); //Tüm sorular çekildi.
     let questionDiv = document.getElementById("question-div");
     let questionAnswer = document.getElementById("question-answer-div");
-    let point=0;
-    let raiseQuestion=0;
+    let point = 0;
+    let raiseQuestion = 0;
 
     ShowQuestion(raiseQuestion);
 
@@ -17,9 +17,9 @@ window.onload = function () {
             questionDiv.innerHTML = "";
             questionAnswer.innerHTML = "";
             let question = allQuestions[questionIndex];
-            console.log(question);
-            let pointDOM=document.querySelector(".point");
-            pointDOM.innerHTML= point;
+            // console.log(question);
+            let pointDOM = document.querySelector(".point");
+            pointDOM.innerHTML = "Score: " + point;
             // Show Question
             let pDOM = document.createElement("p");
             let questionIndicator = document.querySelector(".question-index");
@@ -28,7 +28,7 @@ window.onload = function () {
             questionDiv.appendChild(pDOM);
             // Show Options
             let answersArray = Object.values(question.answers); //question.answers --> Dizi olarak aldı.
-            console.log(answersArray);
+            // console.log(answersArray);
             for (let i = 0; i < answersArray.length; i++) {
                 let btnDOM = document.createElement("button");
                 btnDOM.id = `answer${i}`;
@@ -56,22 +56,36 @@ window.onload = function () {
                         btnID = "D"
                         break;
                 }
-                if(btnID===trueAnswer){
+                if (btnID === trueAnswer) {
                     point++;
                     raiseQuestion++;
                     ShowQuestion(raiseQuestion);
                 }
-                else{
-                    if(point>0){
-                        point--;                    
+                else {
+                    if (point > 0) {
+                        point--;
                     }
                     buttonElement.classList.add("false");
                     buttonElement.style.backgroundColor = "var(--yellow)";
                 }
-            pointDOM.innerHTML= point;
-                console.log(trueAnswer);
-                console.log(btnID);
+                pointDOM.innerHTML = "Score: " + point;
+                // console.log(trueAnswer);
+                // console.log(btnID);
             }
+        }
+        else {//Soru Kalmadıysa
+            let totalPoint = point;
+            console.log(totalPoint);
+            let ekran = document.querySelector("#question-form");
+            ekran.innerHTML = `
+            <div style="justify-content: center;text-align:center;font-size:2em;padding:20px">
+            <p>SCORE</p>
+            <h1>${totalPoint}</h1>
+            <a href="./user-panel.html">
+            <img src="./Images/repeat.png" style="width:100px; margin:30px">
+            </a>
+            </div>
+            `;
         }
     }
 
