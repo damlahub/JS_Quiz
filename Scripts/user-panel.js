@@ -62,7 +62,9 @@ window.onload = function () {
                     ShowQuestion(raiseQuestion);
                 }
                 else{
-                    point--;
+                    if(point>0){
+                        point--;                    
+                    }
                     buttonElement.classList.add("false");
                     buttonElement.style.backgroundColor = "var(--yellow)";
                 }
