@@ -22,7 +22,7 @@ function AdminForm(e) {
     
     function AdminData(name, pass) {
         if (name === ADMIN_NAME && pass === ADMIN_PASS) {
-            window.location.href = "./MainMenu.html"; //Admin paneline yönlendirilecek.
+            window.location.href = "./admin-panel.html"; //Admin paneline yönlendirilecek.
         }
         else if (name == "" && pass == "") {
             DangerToast("null value");

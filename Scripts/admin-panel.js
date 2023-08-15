@@ -25,10 +25,10 @@ function GetData(e) {
         const addQuestion = {
             question,
             answers: {
-                A: answerA,
-                B: answerB,
-                C: answerC,
-                D: answerD,
+                0: answerA,
+                1: answerB,
+                2: answerC,
+                3: answerD,
             },
             trueAnswer: answerTrue
         };

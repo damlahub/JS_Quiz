@@ -20,7 +20,7 @@ function UserForm(e) {
 
     function UserData(name, pass) {
         if (name === USER_NAME && pass === USER_PASS) {
-            window.location.href = "./MainMenu.html"; //User paneline yönlendirilecek.
+            window.location.href = "./user-panel.html"; //User paneline yönlendirilecek.
         }
         else if (name == "" && pass == "") {
             DangerToast("null value");
