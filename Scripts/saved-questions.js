@@ -4,9 +4,15 @@ function GetStoredQuestions() {
     const storedQuestions = localStorage.getItem(STORED_QUESTIONS_KEY);
     return JSON.parse(storedQuestions) || [];
 }
+function DeleteQuestion(index) {
+    let allQuestions = GetStoredQuestions();
+    allQuestions.splice(index, 1);
+    localStorage.setItem(STORED_QUESTIONS_KEY, JSON.stringify(allQuestions));
+    location.reload(); 
+}
 let allQuestions = GetStoredQuestions();
 
-let questionForm=document.querySelector(".question-container");
+let questionForm = document.querySelector(".question-container");
 allQuestions.forEach((question, index) => {
     let answersArray = Object.values(question.answers);
     // <section class="question-div flex-column"></section>
@@ -19,8 +25,14 @@ allQuestions.forEach((question, index) => {
     });
     answersHTML += '</ul>';
     let trueAnswerHTML = `<p>True Answer: ${question.trueAnswer.toUpperCase()}</p>`;
-    let questionContent = questionHTML + answersHTML + trueAnswerHTML;
+    let deleteButtonHTML = `<button class="delete-button" type="button" data-question-index="${index}">Delete</button>`;
+    let questionContent = questionHTML + answersHTML + trueAnswerHTML + deleteButtonHTML;
 
     questionDiv.innerHTML = questionContent;
     questionForm.appendChild(questionDiv);
+
+    let deleteButton = questionDiv.querySelector(".delete-button");
+    deleteButton.addEventListener("click", () => {
+        DeleteQuestion(index);
+    });
 });
